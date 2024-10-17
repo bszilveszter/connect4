@@ -45,7 +45,7 @@ public class Game {
         }
     }
 
-    // Get the human player's move from input
+    // get the human player's move from input
     private int getHumanMove() {
         int col;
         do {
