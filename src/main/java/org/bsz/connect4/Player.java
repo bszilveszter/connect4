@@ -1,6 +1,6 @@
 package org.bsz.connect4;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Player {
     private String name;
