@@ -2,9 +2,7 @@ package org.bsz.connect4;
 
 import java.util.Random;
 
-/**
- * Game class for Connect-4
- */
+
 public class Game {
     private static final int WIN_COUNT = 4;  // 4 in a row to win
     private Board board;
@@ -15,8 +13,8 @@ public class Game {
     public Game(Player human, Player computer) {
         this.humanPlayer = human;
         this.computerPlayer = computer;
-        this.board = new Board();  // Assuming a default 6x7 grid
-        this.currentPlayer = humanPlayer;  // Human always starts
+        this.board = new Board();  // assuming a default 6x7 grid
+        this.currentPlayer = humanPlayer;  // human always starts
     }
 
     public void start() {
@@ -42,7 +40,7 @@ public class Game {
                 System.out.println("It's a draw!");
             }
 
-            // Switch player
+            // switch player
             currentPlayer = (currentPlayer == humanPlayer) ? computerPlayer : humanPlayer;
         }
     }
@@ -52,7 +50,7 @@ public class Game {
         int col;
         do {
             System.out.println("Your turn (" + humanPlayer.getSymbol() + "). Choose a column (1 to " + board.getCols() + "): ");
-            col = humanPlayer.getMove() - 1;  // Assuming 1-based input, adjust to 0-based index
+            col = humanPlayer.getMove() - 1;  // assuming 1-based input, adjust to 0-based index
             if (!board.isValidMove(col)) {
                 System.out.println("Invalid move. Try again.");
             }
@@ -60,7 +58,7 @@ public class Game {
         return col;
     }
 
-    // Get a random valid move for the computer
+    // get a random valid move for the computer
     private int getComputerMove() {
         Random random = new Random();
         int col;
