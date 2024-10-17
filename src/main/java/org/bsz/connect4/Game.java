@@ -1,6 +1,6 @@
 package org.bsz.connect4;
 
-import java.util.Random;
+//import java.util.Random;
 
 
 public class Game {
