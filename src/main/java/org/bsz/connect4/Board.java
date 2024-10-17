@@ -3,8 +3,8 @@ package org.bsz.connect4;
 public class Board {
     private static final char EMPTY = '.';
     private static final int WIN_COUNT = 4;  // 4 in a row to win
-    private final int rows = 6;  // Number of rows
-    private final int cols = 7;  // Number of columns
+    private final int rows = 6;  // number of rows
+    private final int cols = 7;  // number of columns
     private char[][] grid;
 
     public Board() {
@@ -79,7 +79,7 @@ public class Board {
     }
 
     private boolean checkDiagonal(char playerSymbol) {
-        // Check diagonals from bottom-left to top-right
+        // check diagonals from bottom-left to top-right
         for (int row = 3; row < rows; row++) {
             for (int col = 0; col < cols - 3; col++) {
                 if (grid[row][col] == playerSymbol && grid[row - 1][col + 1] == playerSymbol &&
@@ -88,7 +88,7 @@ public class Board {
                 }
             }
         }
-        // Check diagonals from top-left to bottom-right
+        // check diagonals from top-left to bottom-right
         for (int row = 0; row < rows - 3; row++) {
             for (int col = 0; col < cols - 3; col++) {
                 if (grid[row][col] == playerSymbol && grid[row + 1][col + 1] == playerSymbol &&
