@@ -31,6 +31,6 @@ public class Player {
             System.out.print("Enter column number: ");
             return scanner.nextInt();
         }
-        return -1;  // Placeholder, not used for computer player
+        return -1;  // placeholder, not used for computer player
     }
 }
